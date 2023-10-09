@@ -23,15 +23,18 @@ public class WhileGaji04 {
 
             if (jabatan.equalsIgnoreCase("direktur")) {
                 continue;
-            } else if (jabatan.equalsIgnoreCase("manager")) {
+            } else if (jabatan.equalsIgnoreCase("manajer")) {
                 gajiLembur = jumlahJamLembur * 100000;
             }
             else if (jabatan.equalsIgnoreCase("karyawan")) {
                 gajiLembur = jumlahJamLembur * 75000;
+            } else {
+                System.out.println("Jabatan Invalid");
+                gajiLembur = 0;
+                i--;
             }
-            
             totalGajiLembur += gajiLembur;
-            System.out.println("Total gaji lembur: " + totalGajiLembur);
         }
+        System.out.println("Total gaji lembur: " + totalGajiLembur);
     }
 }

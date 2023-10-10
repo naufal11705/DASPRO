@@ -6,7 +6,6 @@ public class LatihanMandiriA {
         Scanner sc04 = new Scanner(System.in);
         String namaMahasiswa;
         char jenisKelamin;
-        int jumlahPerempuan=0;
 
         // Memasukan nama dan jenis kelamin
         for (int i = 0; i < 30; i++) {
@@ -18,7 +17,6 @@ public class LatihanMandiriA {
             // Menampilkan nama mahasiswa perempuan
             if (jenisKelamin == 'P' || jenisKelamin == 'p') {
                 System.out.println("Nama mahasiswa perempuan: "+namaMahasiswa);
-                jumlahPerempuan++;
             }
         }
     }

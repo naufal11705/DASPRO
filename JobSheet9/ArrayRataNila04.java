@@ -20,5 +20,13 @@ public class ArrayRataNila04 {
 
         rata2 = total/nilaiMhs.length;
         System.out.println("Rata-rata nilai = "+rata2);
+
+        for (int i = 0; i < nilaiMhs.length; i++) {
+            if (nilaiMhs[i] > 70) {
+                System.out.println("Mahasiswa ke-"+i+" lulus!");
+            } else {
+                System.out.println("Mahasiswa ke-"+i+" tidak lulus!");
+            }
+        }
     }
 }

@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Tugas_SistemEkspedisi_Pembayaran04{
+public class Kelompok_SistemEkspedisi_Pembayaran04{
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int beratBarang, jarak;

@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Tugas_SistemEkspedisi_Login04 {
+public class Kelompok_SistemEkspedisi_Login04 {
 
     public static void main(String[] args) {
         String username = "user";

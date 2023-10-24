@@ -1,7 +1,7 @@
 package JobSheet9;
-import java.util.Scanner;;
+import java.util.Scanner;
 
-public class ArrayRataNila04 {
+public class ArrayRataNilai04 {
     public static void main(String[] args) {
         Scanner sc04 = new Scanner(System.in);
 
@@ -36,5 +36,6 @@ public class ArrayRataNila04 {
         //Printout rata rata nilai
         System.out.println("Rata-rata nilai lulus= "+(rata2Lulus/lulus));
         System.out.println("Rata-rata nilai tidak lulus= "+(rata2TdkLulus/tdkLulus));
+        
     }
 }

@@ -15,9 +15,10 @@ public class NestedLoop_04 {
         }
         
         int i = 1;
-        double jumlah = 0;
+        double jumlah;
         double rata2 = 0;
         for (double suhu[] : temps) {
+            jumlah = 0;
             System.out.print("Kota ke-" + i + ": ");
             for (double temp : suhu) {
                 jumlah += temp;

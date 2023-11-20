@@ -3,17 +3,15 @@ import java.util.Scanner;
 
 public class Tugas204 {
 
-    //static int[][] nilaiTugas = new int[5][7]
+    static int[][] nilaiTugas = new int[5][7];
 
-    static int[][] nilaiTugas = {
+    /*static int[][] nilaiTugas = {
         {20, 19, 25, 20, 10, 0, 10},
         {30, 30, 40, 10, 15, 20, 25},
         {5, 0, 20, 25, 10, 5, 45},
         {50, 0, 7, 8, 0, 30, 60},
         {15, 10, 16, 15, 10, 10, 5}
-    };
-
-    static int[][] nilaiTemp = new int [5][7];
+    };*/
 
     static Scanner sc = new Scanner(System.in);
 
@@ -37,21 +35,19 @@ public class Tugas204 {
     } 
 
     public static void SortHari() {
-        for (int i = 0; i<nilaiTugas.length; i++){
-            for (int j = 0; j < nilaiTugas.length - i - 1; j++) {
-                if (nilaiTugas[i][j] > nilaiTugas[i][j + 1]){
-                    int temp = nilaiTugas[i][j];
-                    nilaiTugas[i][j] = nilaiTugas[i][j+1];
-                    nilaiTugas[i][j + 1] = temp;
+        int nilaiTertinggi = 0;
+        int indexMahasiswa = -1;
+        int indexMinggu = 0;
+        int nilaiTotal = 0;
+        for (int i = 0; i < nilaiTugas.length; i++){
+            for (int j = 0; j < nilaiTugas[i].length; j++) {
+                if (nilaiTugas[i][j] > nilaiTertinggi){
+                    nilaiTertinggi = nilaiTugas[i][j];
+                    indexMahasiswa = i+1;
+                    indexMinggu = j+1;
                 }
             }
-        }
-
-        for (int i=0; i < nilaiTugas.length; i++) {
-            for (int j=0; j < nilaiTugas.length; j++) {
-                System.out.println(nilaiTugas[i][j]);
-            }
-        }
+        System.out.println("Nilai tertinggi pada minggu ke- "+(i+1)+" adalah "+nilaiTertinggi);        }
     }
 
     public static void NilaiTertinggi() {
@@ -67,7 +63,6 @@ public class Tugas204 {
                     indexMinggu = j+1;
                 }
             }
-        
         }
         System.out.println("Mahasiswa dengan nilai tertinggi adalah mahasiswa ke- "+indexMahasiswa);
         System.out.println("Mendapatkan nilai "+nilaiTertinggi+" pada minggu ke- "+indexMinggu);

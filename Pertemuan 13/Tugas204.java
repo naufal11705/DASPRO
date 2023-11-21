@@ -3,22 +3,21 @@ import java.util.Scanner;
 
 public class Tugas204 {
 
-    static int[][] nilaiTugas = new int[5][7];
-
-    /*static int[][] nilaiTugas = {
-        {20, 19, 25, 20, 10, 0, 10},
-        {30, 30, 40, 10, 15, 20, 25},
-        {5, 0, 20, 25, 10, 5, 45},
-        {50, 0, 7, 8, 0, 30, 60},
-        {15, 10, 16, 15, 10, 10, 5}
-    };*/
+    static int[][] nilaiTugas = new int[100][100];
 
     static Scanner sc = new Scanner(System.in);
+    static int jumlahMahasiswa = 0;
+    static int jumlahTugas = 0;
 
     public static void inputNilai() {
-        for (int i = 0; i < nilaiTugas.length; i++) {
+        System.out.print("Masukkan jumlah mahasiswa: ");
+        jumlahMahasiswa = sc.nextInt();
+        System.out.print("Masukkan jumlah tugas: ");
+        jumlahTugas = sc.nextInt();
+
+        for (int i = 0; i < jumlahMahasiswa; i++) {
             System.out.println("Mahasiswa ke " + (i + 1));
-            for (int j = 0; j < nilaiTugas[i].length; j++) {
+            for (int j = 0; j < jumlahTugas; j++) {
                 System.out.print("Masukkan nilai tugas minggu ke-" + (j + 1) + ": ");
                 nilaiTugas[i][j] = sc.nextInt();
             }
@@ -26,8 +25,8 @@ public class Tugas204 {
     }
 
     public static void Tampil() {
-        for (int i = 0; i < nilaiTugas.length; i++) {
-            for (int j = 0; j < nilaiTugas[i].length; j++) {
+        for (int i = 0; i < jumlahMahasiswa; i++) {
+            for (int j = 0; j < jumlahTugas; j++) {
                 System.out.println("Mahasiswa ke-" + (i + 1) + ", Tugas ke-" + (j + 1) +
                         ": " + nilaiTugas[i][j]);
             }
@@ -36,18 +35,17 @@ public class Tugas204 {
 
     public static void SortHari() {
         int nilaiTertinggi = 0;
-        int indexMahasiswa = -1;
         int indexMinggu = 0;
-        int nilaiTotal = 0;
-        for (int i = 0; i < nilaiTugas.length; i++){
-            for (int j = 0; j < nilaiTugas[i].length; j++) {
+        for (int i = 0; i < jumlahMahasiswa; i++){
+            for (int j = 0; j < jumlahTugas; j++) {
                 if (nilaiTugas[i][j] > nilaiTertinggi){
                     nilaiTertinggi = nilaiTugas[i][j];
-                    indexMahasiswa = i+1;
                     indexMinggu = j+1;
                 }
             }
-        System.out.println("Nilai tertinggi pada minggu ke- "+(i+1)+" adalah "+nilaiTertinggi);        }
+        System.out.println("Nilai tertinggi pada minggu ke- "+(i+1)+" adalah "+nilaiTertinggi);
+        nilaiTertinggi = 0;        
+        }
     }
 
     public static void NilaiTertinggi() {
@@ -55,8 +53,8 @@ public class Tugas204 {
         int indexMahasiswa = -1;
         int indexMinggu = 0;
         int nilaiTotal = 0;
-        for (int i = 0; i < nilaiTugas.length; i++){
-            for (int j = 0; j < nilaiTugas[i].length; j++) {
+        for (int i = 0; i < jumlahMahasiswa; i++){
+            for (int j = 0; j < jumlahTugas; j++) {
                 if (nilaiTugas[i][j] > nilaiTertinggi){
                     nilaiTertinggi = nilaiTugas[i][j];
                     indexMahasiswa = i+1;

@@ -11,7 +11,7 @@ public class Percobaan2 {
             if (y != 1){
                 System.out.print("x");
             }else{
-                System.out.print(" = ");
+                System.out.print("x1 = ");
             }
             return (x * hitungPangkat(x, y - 1));
         }

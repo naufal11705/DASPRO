@@ -35,12 +35,10 @@ public class Tugas204 {
 
     public static void SortHari() {
         int nilaiTertinggi = 0;
-        int indexMinggu = 0;
         for (int i = 0; i < jumlahMahasiswa; i++){
             for (int j = 0; j < jumlahTugas; j++) {
                 if (nilaiTugas[i][j] > nilaiTertinggi){
                     nilaiTertinggi = nilaiTugas[i][j];
-                    indexMinggu = j+1;
                 }
             }
         System.out.println("Nilai tertinggi pada minggu ke- "+(i+1)+" adalah "+nilaiTertinggi);
